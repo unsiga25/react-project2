@@ -8,6 +8,7 @@ import axios from "axios";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 import ReactPaginate from "react-paginate";
+import OrderStatus from "../components/cards/OrderStatus";
 
 export const Booking = () => {
   const [viewport, setViewport] = React.useState({
@@ -214,25 +215,7 @@ export const Booking = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card col-12">
-                  <h4 className="pt-2">Order Status:</h4>
-                  <div className="progress text-center mb-3">
-                    <div
-                      className="progress-bar bg-color"
-                      role="progressbar"
-                      style={{ width: "75%" }}
-                      aria-valuenow="75"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      75%
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <h5>On Delivery</h5>
-                    <p>Sat, 23 Jul 2020, 01:24 PM</p>
-                  </div>
-                </div>
+                <OrderStatus />
               </div>
             </div>
           </div>
